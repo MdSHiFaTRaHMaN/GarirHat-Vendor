@@ -163,7 +163,7 @@ const AddMyCar = () => {
     <div className="mx-auto bg-white p-6">
       <h2 className="text-3xl font-semibold mb-4 flex items-center justify-center gap-2 font-MyStyle">
         <CarOutlined />
-        Sell your car from home for the best price
+        Sell your car with GarirHat – get the best deal, fast and hassle-free! 
       </h2>
       <Form form={form} layout="vertical" onFinish={onFinish}>
         <div className="grid lg:grid-cols-2 gap-x-4">
@@ -349,7 +349,7 @@ const AddMyCar = () => {
             </Select>
           </Form.Item>
           {/* body Type */}
-          <Form.Item label="Body Type" name="body_Type">
+          <Form.Item label="Body Type" name="body_type">
             <Select placeholder="Select Body Type" className="h-[44px]">
               <Option value="Hantchback">Hantchback</Option>
               <Option value="SUV">SUV</Option>
