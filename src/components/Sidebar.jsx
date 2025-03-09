@@ -24,7 +24,7 @@ const sidebarItems = [
   {
     key: "3",
     icon: <CarOutlined />,
-    label: <Link to="/my-car-list">My All Post Car</Link>,
+    label: <Link to="/my-vehicles">My Vehicles</Link>,
   },
   {
     key: "4",
@@ -33,12 +33,12 @@ const sidebarItems = [
   },
   {
     key: "5",
-    icon: <UserOutlined  />,
+    icon: <UserOutlined />,
     label: <Link to="/user-profile">My Profile</Link>,
   },
   {
     key: "6",
-    icon: <CiLogout   />,
+    icon: <CiLogout />,
     label: <Link to="/user-profile">LogOut</Link>,
   },
 ];

@@ -12,6 +12,35 @@ API.interceptors.request.use((config) => {
   return config;
 });
 
+// get all vehicles
+export const useMyVehicles = ({
+  page = 1,
+  limit = 10,
+  vehicle_code = "",
+} = {}) => {
+  const getMyVehicles = async () => {
+    const response = await API.get("/vehicle/web", {
+      params: { page, limit, vehicle_code },
+    });
+    return response.data;
+  };
+
+  const {
+    data: response = {},
+    isLoading,
+    isError,
+    error,
+    refetch,
+  } = useQuery({
+    queryKey: ["myVehicles", page, limit, vehicle_code],
+    queryFn: getMyVehicles,
+  });
+
+  const { data: myVehicles = [], pagination = {} } = response;
+
+  return { myVehicles, pagination, isLoading, isError, error, refetch };
+};
+
 // alLocation list
 export const useAlLocation = () => {
   const getAlLocation = async () => {
@@ -95,7 +124,7 @@ export const useModelByBrand = (brandID) => {
   });
   return { modelByBrand, isLoading, isError, error, refetch };
 };
-//  Price reason 
+//  Price reason
 export const usePriceReason = () => {
   const getPriceReason = async () => {
     const response = await API.get("/price-reason/all");

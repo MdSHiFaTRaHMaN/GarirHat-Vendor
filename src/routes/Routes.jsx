@@ -4,10 +4,12 @@ import Main from "../layout/Main";
 import DashBoard from "../pages/homepage/DashBoard";
 import AddMyCar from "../pages/addcar/AddMyCar";
 import UserMessage from "../pages/usermessage/UserMessage";
-import MyCarList from "../pages/mycarlist/MyCarList";
-import CarDetails from "../pages/cardetailspage/CarDetails";
+import MyCarList from "../pages/myVehicles/MyCarList";
+import CarDetails from "../pages/singleVehicle/CarDetails";
 import UserProfile from "../pages/UserProfilePage.jsx/UserProfile";
 import Practic from "../Practic";
+import MyVehicles from "../pages/myVehicles/MyVehicles";
+import EditVehicle from "../pages/editVehicle/EditVehicle";
 
 export const routes = createBrowserRouter([
   {
@@ -39,8 +41,16 @@ export const routes = createBrowserRouter([
         element: <MyCarList />,
       },
       {
-        path: "/car-details",
+        path: "/my-vehicles",
+        element: <MyVehicles />,
+      },
+      {
+        path: "/my-vehicles/:vehicleID",
         element: <CarDetails />,
+      },
+      {
+        path: "/my-vehicles/:vehicleID/edit",
+        element: <EditVehicle />,
       },
       {
         path: "/test",

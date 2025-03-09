@@ -48,7 +48,7 @@ const Main = () => {
         {/* Sidebar (Desktop) */}
         {isLargeScreen && (
           <Sider
-            width={260}
+            width={320}
             className="hidden lg:block fixed left-0 top-16 h-full bg-white shadow-md"
           >
             <Sidebar />
@@ -70,7 +70,7 @@ const Main = () => {
         {/* Main Content Area */}
         <Layout
           className={`transition-all duration-300 ${
-            isLargeScreen ? "ml-[260px]" : "ml-0"
+            isLargeScreen ? "ml-[320px]" : "ml-0"
           }`}
         >
           <Content className="px-6 pt-6">
