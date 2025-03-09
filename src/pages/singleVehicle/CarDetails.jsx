@@ -128,8 +128,7 @@ const CarDetails = () => {
               </Badge>
             </div>
             <div>
-              <Button>Status</Button>
-              <Button>Status</Button>
+              <Button>Delete</Button>
             </div>
           </div>
         </div>
